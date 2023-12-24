@@ -35,7 +35,7 @@ struct WriteScreen: View {
                                 Text("Zkontrolovat")
                                     .padding()
                                     .foregroundColor(.white)
-                                    .background(Color.blue)
+                                    .background(Color.gray)
                                     .cornerRadius(10)
                             }
                             .padding() // Přidá padding pro oddělení od okolí
