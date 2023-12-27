@@ -30,12 +30,12 @@ struct WriteScreen: View {
             HStack{
                 Button(action: {removeSpaces()
                                 // Zde můžete přidat akci pro ověření čárového kódu
-                                print("Zkontrolovat: \(givenCode)")
+                    codeProcessor.processCode(givenCode: givenCode)                                print("Zkontrolovat: \(givenCode)")
                             }) {
                                 Text("Zkontrolovat")
                                     .padding()
                                     .foregroundColor(.white)
-                                    .background(Color.gray)
+                                    .background(Color.blue)
                                     .cornerRadius(10)
                             }
                             .padding() // Přidá padding pro oddělení od okolí
