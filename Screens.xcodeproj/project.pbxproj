@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921AF3EB2B3B5E0F00C1E362 /* CodeProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AF3EA2B3B5E0F00C1E362 /* CodeProcessor.swift */; };
 		9220AC082B35B94900A58625 /* WriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220AC072B35B94900A58625 /* WriteScreen.swift */; };
 		926548E72B306C8600E9BF80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926548E62B306C8600E9BF80 /* ContentView.swift */; };
 		926548E92B306C8700E9BF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926548E82B306C8700E9BF80 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921AF3EA2B3B5E0F00C1E362 /* CodeProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeProcessor.swift; sourceTree = "<group>"; };
 		9220AC072B35B94900A58625 /* WriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteScreen.swift; sourceTree = "<group>"; };
 		926548E12B306C8600E9BF80 /* Screens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Screens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		926548E62B306C8600E9BF80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				92C66DA62B337EE7008D8C2C /* LookApp.swift */,
+				921AF3EA2B3B5E0F00C1E362 /* CodeProcessor.swift */,
 			);
 			path = SettingsScreens;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				926549112B306D0B00E9BF80 /* SecondScreen.swift in Sources */,
 				92C66DA02B33787C008D8C2C /* ScannerScreen.swift in Sources */,
 				92C66DA72B337EE7008D8C2C /* LookApp.swift in Sources */,
+				921AF3EB2B3B5E0F00C1E362 /* CodeProcessor.swift in Sources */,
 				92C66D9E2B337854008D8C2C /* ProfileScreen.swift in Sources */,
 				9220AC082B35B94900A58625 /* WriteScreen.swift in Sources */,
 			);

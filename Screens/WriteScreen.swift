@@ -10,8 +10,9 @@ import Combine
 
 struct WriteScreen: View {
     @State private var givenCode = ""
+    @State private var messages: [String] = []
     let maxDigits = 13
-
+    let codeProcessor = CodeProcessor()
     var body: some View {
         VStack{
             HStack {
@@ -27,17 +28,25 @@ struct WriteScreen: View {
                 .onReceive(Just(givenCode)) { _ in formatCode() }
             }
             .padding() // Přidá padding pro oddělení od okolí
-            HStack{
-                Button(action: {removeSpaces()
-                                // Zde můžete přidat akci pro ověření čárového kódu
-                    codeProcessor.processCode(givenCode: givenCode)                                print("Zkontrolovat: \(givenCode)")
-                            }) {
-                                Text("Zkontrolovat")
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(10)
-                            }
+            VStack{
+                HStack{ Button(action: {removeSpaces()
+                    // Zde můžete přidat akci pro ověření čárového kódu
+                    messages.append(contentsOf: codeProcessor.processCode(givenCode: givenCode))
+                    print("Zkontrolovat: \(givenCode)")
+                }) {
+                    Text("Zkontrolovat")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                }
+                VStack(alignment: .leading, spacing: 8) {
+                               ForEach(messages, id: \.self) { message in
+                                   Text(message)
+                                       .foregroundColor(.black)
+                               }
+                }
                             .padding() // Přidá padding pro oddělení od okolí
             }
         }
